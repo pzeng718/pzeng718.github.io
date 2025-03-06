@@ -4,32 +4,136 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Peifan Zeng - Portfolio</title>
-    <link rel="stylesheet" href="styles.css" />
+    <!-- Google Fonts for improved typography -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Basic Reset */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "Roboto", sans-serif;
+        color: #333;
+        line-height: 1.6;
+        background-color: #f4f4f4;
+      }
+      header {
+        background: linear-gradient(135deg, #6a11cb, #2575fc);
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+      }
+      header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 5px;
+      }
+      header p {
+        margin: 5px 0;
+      }
+      nav {
+        margin: 10px 0;
+      }
+      nav a {
+        color: #fff;
+        margin: 0 15px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      section {
+        margin-bottom: 40px;
+      }
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+        border-bottom: 2px solid #2575fc;
+        padding-bottom: 5px;
+      }
+      .card {
+        background: #fff;
+        border-radius: 5px;
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+      }
+      footer {
+        background: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+      }
+      /* Responsive Navigation */
+      @media (max-width: 600px) {
+        nav a {
+          display: block;
+          margin: 5px 0;
+        }
+      }
+    </style>
   </head>
   <body>
     <header>
-      <h1>Peifan Zeng</h1>
-      <p>
-        Email: <a href="mailto:pz640@nyu.edu">pz640@nyu.edu</a> | Phone: +1
-        (949) 880-5407
-      </p>
-      <p>Location: Jersey City, NJ 07306</p>
-      <nav>
-        <a
-          href="https://www.linkedin.com/in/peifan-zeng-490443170/"
-          target="_blank"
-          >LinkedIn</a
-        >
-        |
-        <a href="https://github.com/pzeng718" target="_blank">GitHub</a>
-      </nav>
+      <div class="container">
+        <h1>Peifan Zeng</h1>
+        <p>
+          Email:
+          <a href="mailto:pz640@nyu.edu" style="color: #fff">pz640@nyu.edu</a> |
+          Phone: +1 (949) 880-5407 | Jersey City, NJ 07306
+        </p>
+        <nav>
+          <a href="#about">About</a>
+          <a href="#education">Education</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+        </nav>
+        <p>
+          <a
+            href="https://www.linkedin.com/in/peifan-zeng-490443170/"
+            target="_blank"
+            style="color: #fff"
+            >LinkedIn</a
+          >
+          |
+          <a
+            href="https://github.com/pzeng718"
+            target="_blank"
+            style="color: #fff"
+            >GitHub</a
+          >
+        </p>
+      </div>
     </header>
 
-    <main>
+    <main class="container">
+      <!-- About Section -->
+      <section id="about">
+        <h2>About Me</h2>
+        <div class="card">
+          <p>
+            I am a passionate software engineer with experience in full-stack
+            development, data science, and cloud computing. Currently pursuing
+            my Master of Science in Computer Science at New York University, I
+            have a strong background in building robust web applications,
+            designing efficient APIs, and working in agile environments. I
+            thrive on solving complex problems with innovative solutions.
+          </p>
+        </div>
+      </section>
+
       <!-- Education Section -->
       <section id="education">
         <h2>Education</h2>
-        <div>
+        <div class="card">
           <h3>New York University, New York, NY</h3>
           <p>
             <strong>Master of Science in Computer Science</strong> (Expected May
@@ -41,7 +145,7 @@
           </p>
           <p>GPA: 3.81/4.0</p>
         </div>
-        <div>
+        <div class="card">
           <h3>University of California, Irvine, CA</h3>
           <p>
             <strong
@@ -58,74 +162,57 @@
         </div>
       </section>
 
-      <!-- Professional Experience Section -->
+      <!-- Experience Section -->
       <section id="experience">
         <h2>Professional Experience</h2>
-        <div>
+        <div class="card">
           <h3>Beijing Microfun Co., Ltd – Beijing, China</h3>
           <p><em>Software Engineer | Sep 2021 - Jul 2023</em></p>
           <ul>
             <li>
               Designed and implemented websites using React and Ant Design,
-              including dynamic landing pages and sophisticated web applications
-              like a customer service system enabling real-time data
-              visualization, manipulation, and streamlined communication
-              workflows.
+              including dynamic landing pages and sophisticated web
+              applications.
             </li>
             <li>
-              Enhanced backend functionality by updating Node.js code to meet
-              changing business requirements while developing and optimizing SQL
-              functions to handle diverse use cases and improve database
-              efficiency.
+              Enhanced backend functionality by updating Node.js code and
+              optimizing SQL functions.
             </li>
-            <li>
-              Built and deployed a CI/CD pipeline to automate the project
-              lifecycle, including building, containerizing with Docker, pushing
-              images to AWS, and deploying them to target machines.
-            </li>
+            <li>Built and deployed a CI/CD pipeline using Docker and AWS.</li>
           </ul>
         </div>
-        <div>
+        <div class="card">
           <h3>Meituan – Beijing, China</h3>
           <p><em>Software Engineer Intern | Jun 2024 - Sep 2024</em></p>
           <ul>
             <li>
-              Collaborated with cross-functional teams, including designers and
-              backend engineers, in an agile environment to deliver seamless and
-              responsive user experiences across various mobile platforms using
-              React Native and Redux.
+              Collaborated in an agile environment using React Native and Redux.
             </li>
             <li>
-              Designed and implemented real-time data fetching with RESTful APIs
-              and WebSocket support, enabling dynamic updates and improving
-              application responsiveness using JavaScript and Axios.
+              Implemented real-time data fetching with RESTful APIs and
+              WebSocket support.
             </li>
             <li>
-              Engaged in agile practices, including sprint planning and
-              stand-ups, while improving code quality through reviews,
-              TypeScript refactoring, and Git version control.
+              Improved code quality through reviews, TypeScript refactoring, and
+              Git version control.
             </li>
           </ul>
         </div>
-        <div>
+        <div class="card">
           <h3>Archemy – Remote</h3>
           <p><em>Software Engineer Intern | Jun 2024 - Sep 2024</em></p>
           <ul>
             <li>
-              Developed and optimized RESTful API endpoints using Java, Spring
-              Boot, and Hibernate, facilitating integration with time-series
-              databases like InfluxDB and vector databases like Pinecone for
-              efficient data retrieval and analysis.
+              Developed RESTful API endpoints using Java, Spring Boot, and
+              Hibernate.
             </li>
             <li>
-              Worked closely with the Data Engineering team to design and
-              implement seamless API integration with SQL databases, improving
-              data consistency and query performance.
+              Integrated APIs with SQL and time-series databases for efficient
+              data retrieval.
             </li>
             <li>
-              Conducted comprehensive testing and debugging of APIs using
-              Postman, JUnit, and command-line tools, ensuring reliability,
-              scalability, and adherence to performance benchmarks.
+              Conducted comprehensive testing with Postman, JUnit, and
+              command-line tools.
             </li>
           </ul>
         </div>
@@ -134,7 +221,7 @@
       <!-- Projects Section -->
       <section id="projects">
         <h2>Projects</h2>
-        <div>
+        <div class="card">
           <h3>Customer Service System Redesign</h3>
           <p>
             <strong>Location:</strong> Beijing, China |
@@ -143,22 +230,20 @@
           </p>
           <ul>
             <li>
-              Redesigned the customer service system using React and Redux,
-              enabling compatibility across multiple games and improving
-              scalability.
+              Redesigned a customer service system using React and Redux,
+              improving scalability and multi-game compatibility.
             </li>
             <li>
-              Enhanced backend security with IP whitelisting, protecting
-              sensitive customer data and streamlining access control.
+              Enhanced backend security with IP whitelisting and streamlined
+              access control.
             </li>
             <li>
-              Improved system reliability to 99.9% uptime by adopting low-code
-              platforms for faster feature development and implementing
-              automated end-to-end and load testing tools.
+              Achieved 99.9% system reliability through low-code platforms and
+              automated testing tools.
             </li>
           </ul>
         </div>
-        <div>
+        <div class="card">
           <h3>Automated Testing Tools Website</h3>
           <p>
             <strong>Location:</strong> Beijing, China |
@@ -167,20 +252,16 @@
           </p>
           <ul>
             <li>
-              Developed a Node.js backend with a React frontend to simplify the
-              management of automated testing scripts, significantly reducing
-              manual effort for a QA team of over 20 members.
+              Developed a Node.js backend with a React frontend to streamline
+              testing script management.
             </li>
             <li>
-              Designed and deployed RESTful API endpoints using Express.js to
-              enable real-time script execution and detailed result logging,
-              improving test accuracy and efficiency.
+              Designed RESTful API endpoints using Express.js for real-time
+              script execution.
             </li>
             <li>
-              Built an intuitive admin dashboard with React and Chart.js,
-              providing the QA team with enhanced visibility into test case
-              statistics and execution progress, boosting overall testing
-              productivity.
+              Built an admin dashboard with React and Chart.js to monitor test
+              case statistics and execution progress.
             </li>
           </ul>
         </div>
@@ -189,45 +270,20 @@
       <!-- Skills Section -->
       <section id="skills">
         <h2>Skills</h2>
-        <ul>
-          <li>
-            <strong>Programming Languages:</strong> JavaScript, TypeScript,
-            HTML, CSS, Python, Java, C++, SQL, R
-          </li>
-          <li>
-            <strong>Frameworks:</strong> Spring Boot, Hibernate, React.js,
-            Vue.js, Node.js, PostgreSQL
-          </li>
-          <li>
-            <strong>Tools:</strong> Git, AWS, Azure, Postman, JUnit, Visual
-            Studio
-          </li>
-        </ul>
-      </section>
-
-      <!-- Contact Section -->
-      <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:pz640@nyu.edu">pz640@nyu.edu</a></p>
-        <p>Phone: +1 (949) 880-5407</p>
-        <p>Location: Jersey City, NJ 07306</p>
-        <p>
-          LinkedIn:
-          <a
-            href="https://www.linkedin.com/in/peifan-zeng-490443170/"
-            target="_blank"
-            >Peifan Zeng</a
-          >
-        </p>
-        <p>
-          GitHub:
-          <a href="https://github.com/pzeng718" target="_blank">pzeng718</a>
-        </p>
+        <div class="card">
+          <h3>Programming Languages</h3>
+          <p>JavaScript, TypeScript, HTML, CSS, Python, Java, C++, SQL, R</p>
+          <h3>Frameworks & Tools</h3>
+          <p>
+            React.js, Redux, Spring Boot, Hibernate, Node.js, Express.js,
+            PostgreSQL, Git, AWS, Azure, Postman, JUnit, Visual Studio
+          </p>
+        </div>
       </section>
     </main>
 
     <footer>
-      <p>&copy; 2025 Peifan Zeng</p>
+      <p>&copy; 2025 Peifan Zeng. All Rights Reserved.</p>
     </footer>
   </body>
 </html>
